@@ -1,0 +1,31 @@
+body{
+    background-color: #5b2222;;
+    color: #fff;
+}
+
+.arenas{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 60px auto 0;
+}
+
+.player1, .player2{
+    width: 50%;
+    text-align: center;
+
+}
+
+.player1 img, .player2 img{
+    width: 150px;
+    margin-top: 30px;
+}
+
+.player2 img{
+    transform: scale(-1, 1);
+}
+
+.progressbar{
+    font-size: 18px;
+    font-weight: 600;
+}
