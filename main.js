@@ -1,7 +1,7 @@
 //Задание 0
 const player1 = {
     name: 'Diana',
-    hp: 29,
+    hp: 80,
     img: 'http://reactmarathon-api.herokuapp.com/assets/kitana.gif',
     weapon: ['меч', 'лук', 'пистолет'],
     attack: function () {
@@ -11,7 +11,7 @@ const player1 = {
 
 const player2 = {
     name: 'Alex',
-    hp: 32,
+    hp: 30,
     img: 'http://reactmarathon-api.herokuapp.com/assets/kitana.gif',
     weapon: ['дубинка', 'лук', 'арбалет'],
     attack: function () {
@@ -23,26 +23,28 @@ const player2 = {
 
 
 //Задание 1
-let createPlayer = (classNamePlayer, obj) => {
-    let player = document.createElement('div');
-    player.classList.add(classNamePlayer);
-    document.querySelector('.arenas').appendChild(player)
+const arenas = document.querySelector('.arenas');
 
-    let progressbar = document.createElement('div');
+let createPlayer = (classNamePlayer, obj) => {
+    const player = document.createElement('div');
+    player.classList.add(classNamePlayer);
+    arenas.appendChild(player);
+
+    const progressbar = document.createElement('div');
     progressbar.classList.add('progressbar');
     
-    let character = document.createElement('div');
+    const character = document.createElement('div');
     character.classList.add('character');
     player.appendChild(progressbar);
     player.appendChild(character);
 
-    let life = document.createElement('div');
+    const life = document.createElement('div');
     life.classList.add('life');
-    life.innerHTML = obj.hp;
-    let name = document.createElement('div');
+    life.style.width = `${obj.hp}%`;
+    const name = document.createElement('div');
     name.classList.add('name');
     name.innerHTML = obj.name;
-    let img = document.createElement('img');
+    const img = document.createElement('img');
     img.src = obj.img;
 
 
