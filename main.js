@@ -68,7 +68,7 @@ function changeHP(player) {
     playerLife.style.width = player.hp + '%';
 
     if (player.hp <=0){
-        // arenas.appendChild(playerLose(player.name));
+        arenas.appendChild(playerLose(player.name));
         player.hp = 0;
         playerLife.style.width = 0;
         randomBtn.disabled = true;
@@ -78,12 +78,12 @@ function changeHP(player) {
 
 }
 
-// function playerLose(name) {
-//     const loseTitle = createEl('div', 'loseTitle');
-//     loseTitle.innerText = `${name} Wins!`;
+function playerLose(name) {
+    const loseTitle = createEl('div', 'loseTitle');
+    loseTitle.innerText = `${name} Wins!`;
 
-//     return loseTitle;
-// }
+    return loseTitle;
+}
 
 
 
