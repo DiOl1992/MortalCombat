@@ -80,7 +80,7 @@ function changeHP(player) {
 
 function playerLose(name) {
     const loseTitle = createEl('div', 'loseTitle');
-    loseTitle.innerText = `${name} Wins!`;
+    loseTitle.innerText = `${name} Lose!`;
 
     return loseTitle;
 }
@@ -94,14 +94,6 @@ randomBtn.addEventListener('click', function () {
 })
 
 
-function ShowWinMassage(player) {
-    const loseTitle = createEl('div', 'loseTitle');
-    if(player.hp>0){
-        loseTitle.innerText = `${player.name} Wins!`;
-    }
-
-    arenas.appendChild(loseTitle);
-}
 
 arenas.appendChild(createPlayer(player1));
 arenas.appendChild(createPlayer(player2));
